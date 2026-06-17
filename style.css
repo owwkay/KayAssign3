@@ -1,0 +1,6 @@
+body {
+  background-image: url('corkboard.jpg'); /* https://www.w3schools.com/html/html_images_background.asp */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
