@@ -1,6 +1,49 @@
 body {
-  background-image: url('corkboard.jpg'); /* https://www.w3schools.com/html/html_images_background.asp */
+  background-image: url('corkboard.jpg'); /* Corkboard stock image uploaded by thodsapol thongdeekhieo on Vecteezy https://www.vecteezy.com/photo/19926112-cork-board-isolated-on-white-with-clipping-path */
+  /* https://www.w3schools.com/html/html_images_background.asp to help. I wanted a background image to put the polaroid pictures within a context, rather than a solid colored background. By using a corkboard, my gallery site feels more visually appealing and mimics real life, something that people are used to seeing */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.polaroid {
+  width: 350px;
+  height: 350px;
+  perspective: 1000px;
+  gap: 10px;
+}
+
+.polaroid-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.polaroid:hover .polaroid-inner {
+  transform: rotateY(180deg);
+}
+
+.pola-front,
+.pola-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.pola-front {
+  transform: rotateY(0deg);
+}
+
+.pola-back {
+  transform: rotateY(180deg);
 }
