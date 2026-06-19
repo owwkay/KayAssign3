@@ -7,17 +7,19 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid; /* I used a grid display so that my polaroids would be arrange in a fixed position of 2 rows of 3 pictures */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  justify-content: center;
+  padding-top: 150px;
 }
 
 .polaroid {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   perspective: 1000px;
-  gap: 10px;
+  gap: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25); /* https://www.w3schools.com/cssref/css3_pr_filter.php I wanted to add a drop shadow effect behind each image to further enhance the realism of polaroids being pinned on a corkboard. */
 }
 
 .polaroid-inner {
@@ -47,3 +49,4 @@ body {
 .pola-back {
   transform: rotateY(180deg);
 }
+/* https://www.youtube.com/watch?v=MCyZ-8-7RY8 I used this video tutorial to help me code the image flip effect*/
