@@ -11,12 +11,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 130px;
 }
 
 .polaroid {
-  width: 320px;
-  height: 320px;
+  width: 290px;
+  height: 290px;
   perspective: 1000px;
   gap: 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25); /* https://www.w3schools.com/cssref/css3_pr_filter.php I wanted to add a drop shadow effect behind each image to further enhance the realism of polaroids being pinned on a corkboard. */
