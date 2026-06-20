@@ -34,19 +34,17 @@ body {
   transform: rotateY(180deg);
 }
 
-.pola-front,
-.pola-back {
-  position: absolute;
+.pola-front,.pola-back { /* https://www.youtube.com/watch?v=MCyZ-8-7RY8 I used this video tutorial as well as ChatGPT to help me code the image flip effect, both sources showing that I do not have to use JavaScript to code this behaviour */
+  position: absolute; 
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* https://www.w3schools.com/cssref/css3_pr_backface-visibility.php defines whether or not the backface of an element is visible to the user or not, so basically the back of the image which has the caption will be hidden until the user hovers over it*/
 }
 
 .pola-front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg); /*this is the front side aka the polaroid picture so it's kept at 0 degrees, making it visible to the user*/
 }
 
 .pola-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /*this is the back side aka the caption so it's rotated 180degrees on the Y axis*/
 }
-/* https://www.youtube.com/watch?v=MCyZ-8-7RY8 I used this video tutorial to help me code the image flip effect*/
